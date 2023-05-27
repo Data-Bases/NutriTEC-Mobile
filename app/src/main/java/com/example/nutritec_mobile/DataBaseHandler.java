@@ -50,6 +50,13 @@ public class DataBaseHandler {
         requestQueue.add(request);
     }
 
+    public boolean verifyIDAvailability(int clientID){
+        return true;
+    }
+
+    public boolean verifyPassword(int clientID, String password){
+        return true;
+    }
 }
 
 
