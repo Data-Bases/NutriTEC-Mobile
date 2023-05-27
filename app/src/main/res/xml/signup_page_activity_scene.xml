@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/address"
+        motion:constraintSetStart="@id/name"
+        motion:duration="1000">
+        <KeyFrameSet>
+        </KeyFrameSet>
+        <OnClick motion:targetId="@+id/signup_next_button" />
+        <OnSwipe motion:dragDirection="dragLeft" />
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/info"
+        motion:constraintSetStart="@id/register"
+        motion:duration="1000">
+        <KeyFrameSet>
+        </KeyFrameSet>
+        <OnClick motion:targetId="@id/signup_prev_button" />
+        <OnSwipe motion:dragDirection="dragRight" />
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/info"
+        motion:constraintSetStart="@id/address"
+        motion:duration="1000">
+        <KeyFrameSet>
+        </KeyFrameSet>
+        <OnClick motion:targetId="@+id/signup_next_button" />
+        <OnSwipe motion:dragDirection="dragLeft" />
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/register"
+        motion:constraintSetStart="@id/info"
+        motion:duration="1000">
+        <KeyFrameSet>
+        </KeyFrameSet>
+        <OnClick motion:targetId="@+id/signup_next_button" />
+        <OnSwipe motion:dragDirection="dragLeft" />
+    </Transition>
+    <Transition
+        motion:constraintSetEnd="@+id/address"
+        motion:constraintSetStart="@id/info"
+        motion:duration="1000">
+        <KeyFrameSet>
+        </KeyFrameSet>
+        <OnClick motion:targetId="@id/signup_prev_button" />
+        <OnSwipe motion:dragDirection="dragRight" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/name">
+        <Constraint
+            android:id="@+id/signup_next_button"
+            motion:layout_constraintStart_toEndOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/signup_signup_button"
+            motion:layout_constraintStart_toEndOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/Email_text"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:id="@+id/editTextTextEmailAddress2"
+            android:layout_marginStart="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/Email_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/ID_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextNumber"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/ID_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextNumber"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextPassword"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/password_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/email_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/date_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/weight_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/imc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/provincia_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/canton_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/distrito_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextEmail"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/email_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextID"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/id_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_buttonDate"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            motion:layout_editor_absoluteY="260dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextWeight"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/id_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextIMC"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/password_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextDistrito"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/imc_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextCanton"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/weight_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextProvincia"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/date_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_prev_button"
+            motion:layout_constraintEnd_toStartOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/address">
+        <Constraint
+            android:id="@+id/signup_back_button"
+            motion:layout_constraintEnd_toStartOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_next_button"
+            motion:layout_constraintStart_toEndOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/signup_signup_button"
+            motion:layout_constraintStart_toEndOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/Email_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/Email_text"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:id="@+id/editTextTextEmailAddress2"
+            android:layout_marginStart="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/ID_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextNumber"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/ID_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginTop="30dp" />
+        <Constraint
+            android:id="@+id/signup_editTextPassword"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/password_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/email_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/date_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/weight_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/imc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/fname_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/flast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/slast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextEmail"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/email_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextID"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/id_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextWeight"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/id_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextIMC"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/password_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_buttonDate"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toBottomOf="@+id/date_text" />
+        <Constraint
+            android:id="@+id/signup_editTextFName"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/date_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextFName"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/date_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextFLast"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/weight_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextSLast"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/imc_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/info" >
+        <Constraint
+            android:id="@+id/signup_back_button"
+            motion:layout_constraintEnd_toStartOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_next_button"
+            motion:layout_constraintStart_toEndOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/signup_signup_button"
+            motion:layout_constraintStart_toEndOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/Email_text"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:id="@+id/editTextTextEmailAddress2"
+            android:layout_marginStart="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/Email_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/ID_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextNumber"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/ID_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginTop="30dp" />
+        <Constraint
+            android:id="@+id/signup_editTextPassword"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/password_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/email_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/weight_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/signup_editTextID"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/id_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextEmail"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/email_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/provincia_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/canton_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/distrito_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/fname_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/flast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/slast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:layout_marginEnd="30dp"
+            android:layout_height="wrap_content"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/weight_text"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginStart="30dp"
+            android:id="@+id/signup_editTextWeight" />
+        <Constraint
+            android:id="@+id/signup_buttonDate"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            motion:layout_constraintTop_toBottomOf="@+id/date_text"
+            android:layout_marginTop="1dp" />
+        <Constraint
+            android:layout_marginEnd="30dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="36dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            motion:layout_constraintHorizontal_bias="1.0"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginStart="30dp"
+            android:id="@+id/signup_editTextIMC"
+            motion:layout_constraintTop_toTopOf="@+id/signup_editTextPassword" />
+        <Constraint
+            android:id="@+id/signup_editTextProvincia"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/date_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextCanton"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/weight_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextDistrito"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/imc_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextFName"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/date_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextFLast"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/weight_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextSLast"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/imc_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/register" >
+        <Constraint
+            android:id="@+id/signup_back_button"
+            motion:layout_constraintEnd_toStartOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_next_button"
+            motion:layout_constraintStart_toEndOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_signup_button"
+            motion:layout_constraintStart_toEndOf="@+id/space"
+            android:layout_width="206dp"
+            android:layout_height="65dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/Email_text"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:id="@+id/editTextTextEmailAddress2"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/signup_buttonDate"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toBottomOf="@+id/date_text" />
+        <Constraint
+            android:id="@+id/signup_editTextWeight"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/id_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextIMC"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/password_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/date_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/imc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/weight_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/provincia_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/canton_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/canton_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp" />
+        <Constraint
+            android:id="@+id/distrito_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/fname_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintTop_toTopOf="@+id/colored_box"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/flast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextEmail"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/slast_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/signup_editTextID"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextProvincia"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/date_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextCanton"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/weight_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextDistrito"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/imc_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextFName"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/date_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextFLast"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/weight_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/signup_editTextSLast"
+            motion:layout_constraintEnd_toEndOf="@+id/colored_box"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/colored_box"
+            android:layout_marginBottom="15dp"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/imc_text"
+            android:layout_marginStart="30dp"
+            motion:layout_constraintHorizontal_bias="0.45"
+            motion:layout_constraintStart_toStartOf="@+id/colored_box"
+            android:visibility="invisible" />
+    </ConstraintSet>
+    <Transition
+        motion:constraintSetStart="@+id/address"
+        motion:constraintSetEnd="@+id/name" >
+        <OnClick motion:targetId="@+id/signup_prev_button" />
+        <OnSwipe motion:dragDirection="dragRight" />
+    </Transition>
+</MotionScene>
