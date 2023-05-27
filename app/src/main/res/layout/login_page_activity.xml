@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pass"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palette_dark">
+
+    <ImageView
+        android:id="@+id/login_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/login_background" />
+
+    <Button
+        android:id="@+id/login_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="206dp"
+        android:layout_height="65dp"
+        android:background="#C0FFFFFF"
+        android:drawableTint="@color/palette_blue"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Log In"
+        android:textColor="#c0FFFFFF"
+        android:textSize="18dp"
+        app:backgroundTint="@color/palette_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/space"
+        app:rippleColor="@color/palette_dark" />
+
+    <Button
+        android:id="@+id/login_back_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="206dp"
+        android:layout_height="65dp"
+        android:background="#C0FFFFFF"
+        android:drawableTint="@color/palette_blue"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Back"
+        android:textColor="#c0FFFFFF"
+        android:textSize="18dp"
+        app:backgroundTint="@color/palette_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/space" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/login_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/login_title1"
+        android:layout_width="337dp"
+        android:layout_height="104dp"
+        android:fontFamily="@font/brandon_grotesque_medium_italic"
+        android:shadowColor="#000000"
+        android:shadowRadius="20"
+        android:text="An apple a day..."
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13999999" />
+
+    <TextView
+        android:id="@+id/login_title2"
+        android:layout_width="332dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/palette_purple"
+        android:fontFamily="@font/brandon_grotesque_bold_italic"
+        android:foregroundTint="@color/palette_purple"
+        android:shadowColor="#FFFFFF"
+        android:shadowRadius="20"
+        android:text="you know the rest!"
+        android:textAlignment="textEnd"
+        android:textColor="#6750a4"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="@+id/login_title1"
+        app:layout_constraintTop_toTopOf="@+id/login_title1" />
+
+    <ImageView
+        android:id="@+id/colored_box"
+        android:layout_width="0dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/palette_dark"
+        app:layout_constraintBottom_toTopOf="@+id/login_back_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_title2"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:srcCompat="@drawable/box"
+        app:tint="@color/palette_dark" />
+
+    <TextView
+        android:id="@+id/ID_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="ID"
+        android:textAllCaps="false"
+        android:textColor="#c0FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/colored_box"
+        app:layout_constraintTop_toTopOf="@+id/colored_box" />
+
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Password"
+        android:textAllCaps="false"
+        android:textColor="#c0FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/colored_box"
+        app:layout_constraintTop_toBottomOf="@+id/login_editTextNumber" />
+
+    <EditText
+        android:id="@+id/login_editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="#c0FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/colored_box"
+        app:layout_constraintEnd_toEndOf="@+id/colored_box"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="@+id/colored_box"
+        app:layout_constraintTop_toBottomOf="@+id/password_text"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/login_editTextNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="9"
+        android:outlineSpotShadowColor="#FFFFFF"
+        android:textColor="#c0FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/colored_box"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/colored_box"
+        app:layout_constraintTop_toBottomOf="@+id/ID_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding = "15dp"
+    android:background="@null">
+    <TextView
+        android:id="@+id/cellAvailability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Available"
+        android:textSize="18dp"
+        android:textColor="#c0ffffff">
+
+    </TextView>
+    <TextView
+        android:id="@+id/cellName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Name:"
+        android:textSize="18dp"
+        android:textColor="#c0ffffff">
+
+    </TextView>
+    <TextView
+        android:id="@+id/cellDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Description:"
+        android:textColor="#c0ffffff"
+        android:textSize="18dp">
+    </TextView>
+    <TextView
+        android:id="@+id/cellBranch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Branch:"
+        android:textColor="#c0ffffff"
+        android:textSize="18dp">
+    </TextView>
+    <TextView
+        android:id="@+id/cellInstructor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Instructor:"
+        android:textColor="#c0ffffff"
+        android:textSize="18dp">
+    </TextView>
+    <TextView
+        android:id="@+id/cellDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Date:"
+        android:textColor="#c0ffffff"
+        android:textSize="18dp">
+    </TextView>
+    <TextView
+        android:id="@+id/cellStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Start Time:"
+        android:textColor="#c0ffffff"
+        android:textSize="18dp">
+    </TextView>
+    <TextView
+        android:id="@+id/cellEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="End Time:"
+        android:textColor="#c0ffffff"
+        android:textSize="18dp">
+    </TextView>
+
+
+</LinearLayout>
