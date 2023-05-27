@@ -1,6 +1,7 @@
 package com.example.nutritec_mobile;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 
@@ -24,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        DataBaseHandler dataBaseHandler = new DataBaseHandler(this);
+        dataBaseHandler.getVitamins();
+        Log.i("VITAMINS",Vitamin.vitamins.toString());
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
