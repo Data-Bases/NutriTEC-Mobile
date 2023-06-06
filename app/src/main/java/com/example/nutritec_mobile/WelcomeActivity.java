@@ -20,6 +20,14 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome_activity);
+        DataBaseHandler dataBaseHandler = new DataBaseHandler(this);
+
+        dataBaseHandler.getProducts(new VerificationBooleanCallback() {
+            @Override
+            public void onVerificationResult(boolean state) {
+
+            }
+        });
 
         timer = new Timer();
         timer.schedule(new TimerTask() {

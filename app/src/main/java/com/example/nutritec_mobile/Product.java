@@ -2,15 +2,15 @@ package com.example.nutritec_mobile;
 
 import java.util.ArrayList;
 
-public class Vitamin {
-    public static ArrayList<Vitamin> vitamins = new ArrayList<>();
+public class Product {
+    public static ArrayList<Product> products = new ArrayList<>();
     private int id;
     private String name;
 
-    public Vitamin() {
+    public Product() {
     }
 
-    public Vitamin(int id, String name) {
+    public Product(int id, String name) {
         this.id = id;
         this.name = name;
     }
