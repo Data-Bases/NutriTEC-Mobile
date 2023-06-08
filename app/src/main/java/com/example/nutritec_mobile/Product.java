@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Product {
     public static ArrayList<Product> products = new ArrayList<>();
+
     private int id;
     private String name;
 

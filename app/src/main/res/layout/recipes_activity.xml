@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/main_background" />
 
     <Button
-        android:id="@+id/back_button"
+        android:id="@+id/back_recipe_button"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="65dp"
@@ -65,7 +65,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:backgroundTint="#50FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        app:layout_constraintBottom_toTopOf="@+id/back_recipe_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

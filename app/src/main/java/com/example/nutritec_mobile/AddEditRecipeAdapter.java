@@ -1,7 +1,6 @@
 package com.example.nutritec_mobile;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,13 +14,13 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class AddProductsAdapter extends ArrayAdapter<Product>{
+public class AddEditRecipeAdapter extends ArrayAdapter<Product>{
     public static boolean firstRefresh = false;
     private DataBaseHandler dataBaseHandler;
     private AlertDialog loadingDialog;
     private AlertDialog.Builder builder;
 
-    public AddProductsAdapter(Context context, Context aux, List<Product> classes) {
+    public AddEditRecipeAdapter(Context context, Context aux, List<Product> classes) {
         super(context, 0, classes);
         dataBaseHandler = new DataBaseHandler(context);
         builder = new AlertDialog.Builder(aux, R.style.TransparentAlertDialog);
@@ -35,7 +34,7 @@ public class AddProductsAdapter extends ArrayAdapter<Product>{
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Product product = getItem(position);
         if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.add_product_cell, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.add_edit_recipe_cell, parent, false);
         }
 
         TextView name = convertView.findViewById(R.id.cellName);

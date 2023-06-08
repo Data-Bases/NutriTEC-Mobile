@@ -1,7 +1,6 @@
 package com.example.nutritec_mobile;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,13 +14,13 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class AddProductsAdapter extends ArrayAdapter<Product>{
+public class AddDailyAdapter extends ArrayAdapter<DailyMeal>{
     public static boolean firstRefresh = false;
     private DataBaseHandler dataBaseHandler;
     private AlertDialog loadingDialog;
     private AlertDialog.Builder builder;
 
-    public AddProductsAdapter(Context context, Context aux, List<Product> classes) {
+    public AddDailyAdapter(Context context,Context aux, List<DailyMeal> classes) {
         super(context, 0, classes);
         dataBaseHandler = new DataBaseHandler(context);
         builder = new AlertDialog.Builder(aux, R.style.TransparentAlertDialog);
@@ -33,9 +32,9 @@ public class AddProductsAdapter extends ArrayAdapter<Product>{
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        Product product = getItem(position);
+        DailyMeal product = getItem(position);
         if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.add_product_cell, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.add_daily_cell, parent, false);
         }
 
         TextView name = convertView.findViewById(R.id.cellName);
@@ -50,23 +49,46 @@ public class AddProductsAdapter extends ArrayAdapter<Product>{
                     name.setText(product.getName());
                 } else {
                     if (servings.getText().toString().equals("")){
-                        loadingDialog.show();
-                        dataBaseHandler.getProductByID(product.getId(), 1.0, new VerificationStringCallback() {
-                            @Override
-                            public void onVerificationResult(String response) {
-                                name.setText(response);
-                                loadingDialog.dismiss();
-                            }
-                        });
+                        if (product.getType().equals("P")){
+                            loadingDialog.show();
+                            dataBaseHandler.getProductByID(product.getId(), 1.0, new VerificationStringCallback() {
+                                @Override
+                                public void onVerificationResult(String response) {
+                                    name.setText(response);
+                                    loadingDialog.dismiss();
+                                }
+                            });
+                        } else {
+                            loadingDialog.show();
+                            dataBaseHandler.getRecipeByID(product.getId(), 1.0, new VerificationStringCallback() {
+                                @Override
+                                public void onVerificationResult(String response) {
+                                    name.setText(response);
+                                    loadingDialog.dismiss();
+                                }
+                            });
+                        }
                     } else {
-                        loadingDialog.show();
-                        dataBaseHandler.getProductByID(product.getId(), Double.parseDouble(servings.getText().toString()), new VerificationStringCallback() {
-                            @Override
-                            public void onVerificationResult(String response) {
-                                name.setText(response);
-                                loadingDialog.dismiss();
-                            }
-                        });
+                        if (product.getType().equals("P")){
+                            loadingDialog.show();
+                            dataBaseHandler.getProductByID(product.getId(), Double.parseDouble(servings.getText().toString()), new VerificationStringCallback() {
+                                @Override
+                                public void onVerificationResult(String response) {
+                                    name.setText(response);
+                                    loadingDialog.dismiss();
+                                }
+                            });
+                        } else {
+                            loadingDialog.show();
+                            dataBaseHandler.getRecipeByID(product.getId(), Double.parseDouble(servings.getText().toString()), new VerificationStringCallback() {
+                                @Override
+                                public void onVerificationResult(String response) {
+                                    name.setText(response);
+                                    loadingDialog.dismiss();
+                                }
+                            });
+                        }
+
                     }
 
                 }
@@ -103,4 +125,5 @@ public class AddProductsAdapter extends ArrayAdapter<Product>{
         this.notifyDataSetChanged();
         return convertView;
     }
+
 }

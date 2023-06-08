@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/main_background" />
 
     <Button
-        android:id="@+id/back_addprod_button"
+        android:id="@+id/back_recipe_button"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="65dp"
@@ -33,26 +33,27 @@
         android:textSize="18dp"
         app:backgroundTint="@color/palette_dark"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/space2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="@color/palette_dark" />
 
     <Button
-        android:id="@+id/save_button"
+        android:id="@+id/add_recipe_button"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="206dp"
-        android:layout_height="65dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
         android:background="#c0333333"
         android:drawableTint="@color/palette_blue"
         android:fontFamily="@font/brandon_grotesque_regular_italic"
-        android:text="Save"
+        android:text="+"
+        android:textAlignment="center"
         android:textColor="#c0FFFFFF"
-        android:textSize="18dp"
+        android:textSize="30dp"
         app:backgroundTint="@color/palette_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/colored_box"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/back_addprod_button"
+        app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="@color/palette_dark" />
 
     <ImageView
@@ -60,11 +61,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:backgroundTint="#50FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/back_addprod_button"
+        app:layout_constraintBottom_toTopOf="@+id/back_recipe_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,46 +74,17 @@
         app:tint="@color/palette_dark" />
 
     <TextView
-        android:id="@+id/recipe_name_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/brandon_grotesque_regular_italic"
-        android:text="Recipe's name"
-        android:textAllCaps="false"
-        android:textColor="@color/palette_dark"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_recipe_text" />
-
-    <EditText
-        android:id="@+id/recipe_name_box"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="#333333"
-        android:ems="10"
-        android:outlineSpotShadowColor="#333333"
-        android:textColor="@color/palette_dark"
-        android:textColorHint="@color/palette_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipe_name_text" />
-
-    <TextView
-        android:id="@+id/new_recipe_text"
+        android:id="@+id/login_title"
         android:layout_width="337dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:fontFamily="@font/brandon_grotesque_medium_italic"
         android:shadowColor="#FFFFFF"
         android:shadowRadius="20"
-        android:text="New recipe"
+        android:text="Here are your entries"
         android:textAlignment="viewStart"
         android:textColor="@color/palette_dark"
-        android:textSize="40dp"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/classes_listView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/home_background" />
@@ -129,14 +101,6 @@
         app:layout_constraintEnd_toEndOf="@+id/colored_box"
         app:layout_constraintStart_toStartOf="@+id/colored_box"
         app:layout_constraintTop_toTopOf="@+id/colored_box" />
-
-    <Space
-        android:id="@+id/space2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="684dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

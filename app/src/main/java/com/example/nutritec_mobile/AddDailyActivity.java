@@ -4,8 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.ContentInfo;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -15,10 +13,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AddProductsActivity extends AppCompatActivity {
+public class AddDailyActivity extends AppCompatActivity {
     public Button back_button;
     public Button save_button;
-    public EditText recipe_name;
+    public EditText search_text;
     private ListView classListView;
     private AlertDialog.Builder errorMessage;
 
@@ -30,7 +28,7 @@ public class AddProductsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_products_activity);
+        setContentView(R.layout.add_daily_activity);
         iniWidgets();
         setClassAdapter(this);
 
@@ -39,10 +37,10 @@ public class AddProductsActivity extends AppCompatActivity {
         errorMessage = new AlertDialog.Builder(this);
         errorMessage.setCancelable(true);
 
-        back_button = (Button) findViewById(R.id.back_addprod_button);
+        back_button = (Button) findViewById(R.id.back_adddaily_button);
         save_button = (Button) findViewById(R.id.save_button);
 
-        recipe_name = (EditText) findViewById(R.id.recipe_name_box);
+        search_text = (EditText) findViewById(R.id.search_box);
 
         classListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -54,11 +52,12 @@ public class AddProductsActivity extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ProductToAdd.products_to_add.clear();
-                dataBaseHandler.getRecipes(new VerificationBooleanCallback() {
+
+
+                dataBaseHandler.getDaily(getMeal(),new VerificationBooleanCallback() {
                     @Override
                     public void onVerificationResult(boolean state) {
-                        Intent intent = new Intent(AddProductsActivity.this, RecipesActivity.class);
+                        Intent intent = new Intent(AddDailyActivity.this, DailymealActivity.class);
                         startActivity(intent);
                         finish();
                     }
@@ -83,41 +82,40 @@ public class AddProductsActivity extends AppCompatActivity {
                         TextView servings = desiredView.findViewById(R.id.portion);
                         TextView name = desiredView.findViewById(R.id.cellName);
                         if (addButton.getText().toString().equals("-")) {
-                            Product product_to_check = new Product();
-                            try{
-                                product_to_check = (Product) classListView.getAdapter().getItem(i);
-                            } catch (Exception e){
+                            for (DailyMeal product_to_check : DailyMeal.recipes_products) {
+                                if (product_to_check.getName() == name.getText().toString().split("\n")[0]) {
+                                    DailyMeal product;
+                                    product = product_to_check;
+                                    product.setServings(Double.parseDouble(servings.getText().toString()));
+                                    DailyMeal.add_recipes_products.add(product);
+                                }
                             }
-                            ProductToAdd new_product = new ProductToAdd(product_to_check.getId(),product_to_check.getName(), Double.parseDouble(servings.getText().toString()));
-                            ProductToAdd.products_to_add.add(new_product);
                         }
                     } catch (Exception e){
 
                     }
                 }
-                if(recipe_name.getText().toString().equals("") || ProductToAdd.products_to_add.isEmpty()){
+                if(DailyMeal.add_recipes_products.isEmpty()){
                     loadingDialog.dismiss();
-                    errorMessage.setMessage("In order to create a recipe you need a name and at least one ingredient.");
+                    errorMessage.setMessage("In order make an entry you need at least one product or recipe.");
                     AlertDialog errorAlert = errorMessage.create();
                     errorAlert.show();
                 } else {
-                    dataBaseHandler.addRecipe(recipe_name.getText().toString(), new VerificationBooleanCallback() {
+                    dataBaseHandler.addDaily(new VerificationBooleanCallback() {
                         @Override
                         public void onVerificationResult(boolean state) {
-                            ProductToAdd.products_to_add.clear();
-                            dataBaseHandler.getRecipes(new VerificationBooleanCallback() {
+                            DailyMeal.add_recipes_products.clear();
+                            dataBaseHandler.getDaily(getMeal(),new VerificationBooleanCallback() {
                                 @Override
                                 public void onVerificationResult(boolean state) {
                                     loadingDialog.dismiss();
-                                    Intent intent = new Intent(AddProductsActivity.this, RecipesActivity.class);
+                                    Intent intent = new Intent(AddDailyActivity.this, DailymealActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
                             });
                         }
                     });
-
-                    //ProductToAdd.products_to_add.clear();
                 }
             }
         });
@@ -127,8 +125,23 @@ public class AddProductsActivity extends AppCompatActivity {
 
     }
 
+    private int getMeal() {
+        if (DailyMeal.currentDaily.equals("Breakfast")){
+            return 0;
+        } else if (DailyMeal.currentDaily.equals("Lunch")){
+            return 1;
+        } else if (DailyMeal.currentDaily.equals("Dinner")){
+            return 2;
+        } else if (DailyMeal.currentDaily.equals("Snack")){
+            return 3;
+        } else {
+            return 0;
+        }
+
+    }
+
     private void setClassAdapter(Context aux) {
-        AddProductsAdapter classAdapter = new AddProductsAdapter(getApplicationContext(), aux,Product.products);
+        AddDailyAdapter classAdapter = new AddDailyAdapter(getApplicationContext(), aux, DailyMeal.recipes_products);
         classListView.setAdapter(classAdapter);
     }
 

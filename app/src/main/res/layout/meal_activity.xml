@@ -21,14 +21,14 @@
         app:srcCompat="@drawable/main_background" />
 
     <Button
-        android:id="@+id/logout_button"
+        android:id="@+id/back_meal_button"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="65dp"
         android:background="#c0333333"
         android:drawableTint="@color/palette_blue"
         android:fontFamily="@font/brandon_grotesque_regular_italic"
-        android:text="Log Out"
+        android:text="Back"
         android:textColor="#c0FFFFFF"
         android:textSize="18dp"
         app:backgroundTint="@color/palette_dark"
@@ -59,7 +59,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/logout_button"
+        app:layout_constraintBottom_toTopOf="@+id/back_meal_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/home_background"
         app:layout_constraintTop_toBottomOf="@+id/login_title">
@@ -71,15 +71,15 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/recipe_button"
+            android:id="@+id/breakfast_button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="200dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#c0333333"
             android:drawableTint="@color/palette_blue"
             android:fontFamily="@font/brandon_grotesque_regular_italic"
-            android:text="Recipes"
+            android:text="Breakfast"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#c0FFFFFF"
@@ -93,15 +93,59 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/daily_button"
+            android:id="@+id/lunch_button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="200dp"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#c0333333"
             android:drawableTint="@color/palette_blue"
             android:fontFamily="@font/brandon_grotesque_regular_italic"
-            android:text="Daily       Consumption"
+            android:text="Lunch"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#c0FFFFFF"
+            android:textSize="24sp"
+            app:backgroundTint="@color/palette_dark"
+            app:rippleColor="@color/palette_dark" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/dinner_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#c0333333"
+            android:drawableTint="@color/palette_blue"
+            android:fontFamily="@font/brandon_grotesque_regular_italic"
+            android:text="Dinner"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#c0FFFFFF"
+            android:textSize="24sp"
+            app:backgroundTint="@color/palette_dark"
+            app:rippleColor="@color/palette_dark" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/snacks_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#c0333333"
+            android:drawableTint="@color/palette_blue"
+            android:fontFamily="@font/brandon_grotesque_regular_italic"
+            android:text="Snacks"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#c0FFFFFF"

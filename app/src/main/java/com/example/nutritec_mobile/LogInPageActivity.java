@@ -1,6 +1,7 @@
 package com.example.nutritec_mobile;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,35 +35,46 @@ public class LogInPageActivity  extends AppCompatActivity {
         edit_ID = (EditText) findViewById(R.id.login_editTextNumber);
         edit_password = (EditText) findViewById(R.id.login_editTextPassword);
 
-
         login_button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                AlertDialog loadingDialog;
+                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext(), R.style.TransparentAlertDialog);
+                builder.setView(R.layout.dialog_loading);
+                builder.setCancelable(false);
+                loadingDialog = builder.create();
+                loadingDialog.show();
+
                 if (verifyNotNulls()){
                     DBManager.verifyPassword(edit_ID.getText().toString(), edit_password.getText().toString(), new VerificationBooleanCallback() {
                         @Override
                         public void onVerificationResult(boolean state) {
-                            if (state){
-                                DBManager.getRecipes(new VerificationBooleanCallback() {
-                                    @Override
-                                    public void onVerificationResult(boolean state) {
-                                        Client.email_client = edit_ID.getText().toString();
-                                        Intent intent = new Intent(LogInPageActivity.this, RecipesActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    }
-                                });
+                            AlertDialog.Builder errorMessage = new AlertDialog.Builder(v.getContext());
+                            errorMessage.setCancelable(true);
 
+                            if (state){
+                                if (Client.currentClient.getUserType().equals("P")) {
+                                    Intent intent = new Intent(LogInPageActivity.this, HomeActivity.class);
+                                    loadingDialog.dismiss();
+                                    startActivity(intent);
+                                    finish();
+                                } else {
+                                    loadingDialog.dismiss();
+                                    errorMessage.setMessage("This type of user is not a Patient, therefore is not allowed");
+                                    AlertDialog errorAlert = errorMessage.create();
+                                    errorAlert.show();
+                                }
                             } else {
-                                AlertDialog.Builder errorMessage = new AlertDialog.Builder(v.getContext());
-                                errorMessage.setCancelable(true);
+                                loadingDialog.dismiss();
                                 errorMessage.setMessage("Incorrect email or password.");
                                 AlertDialog errorAlert = errorMessage.create();
                                 errorAlert.show();
                             }
                         }
                     });
-
+                } else {
+                    loadingDialog.dismiss();
                 }
             }
         });

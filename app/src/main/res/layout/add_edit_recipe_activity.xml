@@ -60,7 +60,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:backgroundTint="#50FFFFFF"
@@ -73,35 +73,6 @@
         app:tint="@color/palette_dark" />
 
     <TextView
-        android:id="@+id/recipe_name_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/brandon_grotesque_regular_italic"
-        android:text="Recipe's name"
-        android:textAllCaps="false"
-        android:textColor="@color/palette_dark"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_recipe_text" />
-
-    <EditText
-        android:id="@+id/recipe_name_box"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="#333333"
-        android:ems="10"
-        android:outlineSpotShadowColor="#333333"
-        android:textColor="@color/palette_dark"
-        android:textColorHint="@color/palette_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipe_name_text" />
-
-    <TextView
         android:id="@+id/new_recipe_text"
         android:layout_width="337dp"
         android:layout_height="wrap_content"
@@ -109,7 +80,7 @@
         android:fontFamily="@font/brandon_grotesque_medium_italic"
         android:shadowColor="#FFFFFF"
         android:shadowRadius="20"
-        android:text="New recipe"
+        android:text="Add product"
         android:textAlignment="viewStart"
         android:textColor="@color/palette_dark"
         android:textSize="40dp"

@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/main_background" />
 
     <Button
-        android:id="@+id/back_addprod_button"
+        android:id="@+id/back_adddaily_button"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="65dp"
@@ -52,7 +52,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/back_addprod_button"
+        app:layout_constraintStart_toEndOf="@+id/back_adddaily_button"
         app:rippleColor="@color/palette_dark" />
 
     <ImageView
@@ -64,7 +64,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:backgroundTint="#50FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/back_addprod_button"
+        app:layout_constraintBottom_toTopOf="@+id/back_adddaily_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,21 +73,21 @@
         app:tint="@color/palette_dark" />
 
     <TextView
-        android:id="@+id/recipe_name_text"
+        android:id="@+id/search_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:fontFamily="@font/brandon_grotesque_regular_italic"
-        android:text="Recipe's name"
+        android:text="Search"
         android:textAllCaps="false"
         android:textColor="@color/palette_dark"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_recipe_text" />
+        app:layout_constraintTop_toBottomOf="@+id/new_entry_text" />
 
     <EditText
-        android:id="@+id/recipe_name_box"
+        android:id="@+id/search_box"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -99,17 +99,17 @@
         android:textColorHint="@color/palette_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recipe_name_text" />
+        app:layout_constraintTop_toBottomOf="@+id/search_text" />
 
     <TextView
-        android:id="@+id/new_recipe_text"
+        android:id="@+id/new_entry_text"
         android:layout_width="337dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:fontFamily="@font/brandon_grotesque_medium_italic"
         android:shadowColor="#FFFFFF"
         android:shadowRadius="20"
-        android:text="New recipe"
+        android:text="New entry"
         android:textAlignment="viewStart"
         android:textColor="@color/palette_dark"
         android:textSize="40dp"
