@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class AddDailyActivity extends AppCompatActivity {
     public Button back_button;
     public Button save_button;
-    public EditText search_text;
     private ListView classListView;
     private AlertDialog.Builder errorMessage;
 
@@ -39,8 +38,6 @@ public class AddDailyActivity extends AppCompatActivity {
 
         back_button = (Button) findViewById(R.id.back_adddaily_button);
         save_button = (Button) findViewById(R.id.save_button);
-
-        search_text = (EditText) findViewById(R.id.search_box);
 
         classListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

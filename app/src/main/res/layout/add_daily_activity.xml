@@ -60,7 +60,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:backgroundTint="#50FFFFFF"
@@ -71,35 +71,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/box"
         app:tint="@color/palette_dark" />
-
-    <TextView
-        android:id="@+id/search_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/brandon_grotesque_regular_italic"
-        android:text="Search"
-        android:textAllCaps="false"
-        android:textColor="@color/palette_dark"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_entry_text" />
-
-    <EditText
-        android:id="@+id/search_box"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:backgroundTint="#333333"
-        android:ems="10"
-        android:outlineSpotShadowColor="#333333"
-        android:textColor="@color/palette_dark"
-        android:textColorHint="@color/palette_dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_text" />
 
     <TextView
         android:id="@+id/new_entry_text"
