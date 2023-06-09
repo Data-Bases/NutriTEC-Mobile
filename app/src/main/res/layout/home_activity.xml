@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pass"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/palette_dark">
+
+    <ImageView
+        android:id="@+id/home_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/main_background" />
+
+    <Button
+        android:id="@+id/logout_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="#c0333333"
+        android:drawableTint="@color/palette_blue"
+        android:fontFamily="@font/brandon_grotesque_regular_italic"
+        android:text="Log Out"
+        android:textColor="#c0FFFFFF"
+        android:textSize="18dp"
+        app:backgroundTint="@color/palette_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/palette_dark" />
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/brandon_grotesque_medium_italic"
+        android:shadowColor="#FFFFFF"
+        android:shadowRadius="20"
+        android:text="Welcome back!"
+        android:textAlignment="center"
+        android:textColor="@color/palette_dark"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/home_background" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/logout_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/home_background"
+        app:layout_constraintTop_toBottomOf="@+id/login_title">
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/recipe_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="#c0333333"
+            android:drawableTint="@color/palette_blue"
+            android:fontFamily="@font/brandon_grotesque_regular_italic"
+            android:text="Recipes"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#c0FFFFFF"
+            android:textSize="24sp"
+            app:backgroundTint="@color/palette_dark"
+            app:rippleColor="@color/palette_dark" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/daily_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="#c0333333"
+            android:drawableTint="@color/palette_blue"
+            android:fontFamily="@font/brandon_grotesque_regular_italic"
+            android:text="Daily       Consumption"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#c0FFFFFF"
+            android:textSize="24sp"
+            app:backgroundTint="@color/palette_dark"
+            app:rippleColor="@color/palette_dark" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

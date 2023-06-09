@@ -13,4 +13,14 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="TransparentAlertDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:fontFamily">@font/brandon_grotesque_light</item>
+        <item name="android:textColor">"#FFFFFF"</item>
+        <item name="android:windowBackground">"#C0333333"</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
 </resources>
